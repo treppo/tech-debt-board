@@ -1,7 +1,7 @@
 module TechDebt exposing (..)
 
-import Html exposing (Attribute, Html, body, input, li, main_, ol, form, text)
-import Html.Attributes exposing (value)
+import Html exposing (Attribute, Html, body, button, form, input, li, main_, ol, text)
+import Html.Attributes exposing (type_, value)
 import Html.Events as Events exposing (onInput)
 import Positive exposing (Positive)
 
@@ -55,7 +55,7 @@ update msg model =
         AddEntry ->
             { model
                 | uid = model.uid + 1
-                , newDescription = ""
+                , newDescription = "x"
                 , entries =
                     model.entries ++ [ newEntry model.uid model.newDescription ]
             }
